@@ -22,7 +22,7 @@ ronud_to_idx = {'Jeopardy!':0, 'Double Jeopardy!':1, 'Final Jeopardy!':2}
 data2 = data2.replace(ronud_to_idx)
 print(data2)
 
-halved = data2.sample(frac=.15,axis=0)
+halved = data2.sample(frac=.15,axis=0) # edit the frac keyword to adjust size of the dataset you use. 20% uses about 30gb of data to allocate the arrays
 data_test = halved.sample(frac=.2, axis=0)
 data_train = halved.drop(index=data_test.index)
 
